@@ -7,6 +7,6 @@ class HomeController < ApplicationController
   	@uri = URI(@url)
   	@response = Net::HTTP.get(@uri)
   	@output = JSON.parse(@response)
-  	
+  	# @output = JSON.parse(@response)['articles'][0,5]
   end
 end
