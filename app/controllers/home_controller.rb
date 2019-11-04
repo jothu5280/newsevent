@@ -8,5 +8,17 @@ class HomeController < ApplicationController
   	@response = Net::HTTP.get(@uri)
   	@output = JSON.parse(@response)
   	# @output = JSON.parse(@response)['articles'][0,5]
+
+  	if @output.empty?
+  		@final_output = "Error"
+  	elsif !@output
+  		@final_output = "Error"
+  	else
+	  	@final_output = @output['articles'][0]['source']['id']
+	end
+
+	def topic
+	end
+
   end
 end
