@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   	require 'net/http'
   	require 'json'
 
-  	@url = 'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=fde93151b2814cd68c8e0396dfda3e32'
+  	@url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=fde93151b2814cd68c8e0396dfda3e32'
   	@uri = URI(@url)
   	@response = Net::HTTP.get(@uri)
   	@output = JSON.parse(@response)
@@ -33,7 +33,7 @@ class HomeController < ApplicationController
 		  	require 'net/http'
 		  	require 'json'
 
-		  	@url = 'https://newsapi.org/v2/everything?domains=wsj.com?q=' + @term_query + '&apiKey=fde93151b2814cd68c8e0396dfda3e32'
+		  	@url = 'https://newsapi.org/v2/top-headlines?country=us&q=' + @term_query + '&apiKey=fde93151b2814cd68c8e0396dfda3e32'
 		  	@uri = URI(@url)
 		  	@response = Net::HTTP.get(@uri)
 		  	@output = JSON.parse(@response)
