@@ -2,3 +2,21 @@
 <p>Find me in app/views/home/index.html.erb</p>
 
 <%= @final_output %>
+
+
+
+
+LOOP
+
+<% @final_output.each do |item| %>
+  <ul>
+    <li>
+    	<%= item['source']['name'] %></br>
+    	<%= item['author'] %></br>
+	    <%= item['title'] %></br>
+	    <%= item['description'] %></br>
+	    <%= item['publishedAt'] %>
+	</li>
+  </ul>
+<% end %>
+
