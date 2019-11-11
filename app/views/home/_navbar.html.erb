@@ -18,5 +18,34 @@
   </p>
 <% end %>
 
+<script>
+	// autofill second search form
+	var topic_input = document.getElementById("topic");
+	var search_input = document.getElementById("search_search_term");
+	topic_input.onblur=function FillSearch() {
+	  search_input.value = topic_input.value;
+	};
+	// autosubmit second search form
+	var topic_submit = document.getElementById("topic_submit");
+	topic_submit.onmousedown=function ghostsubmit() {
+	  document.getElementById("myform").submit();
+	};
+
+</script>
+
+<script>
+	// submit second form by ajax
+    $(function() {
+        $("#myform").on("submit", function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: $(this).attr("action"),
+                type: 'POST',
+                data: $(this).serialize()
+            });
+        });
+    });
+</script>
+
 
 </nav>
