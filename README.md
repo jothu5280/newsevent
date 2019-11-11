@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+See app in action at https://anywherenews.herokuapp.com/
 
-Things you may want to cover:
+Home page is a display of news items from https://newsapi.org/
 
-* Ruby version
+To search for a specific term within the available results, enter that term in the search field and click "Search"
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The following page will display any results found, if any, and the status of the search. 
