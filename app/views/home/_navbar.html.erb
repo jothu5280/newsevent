@@ -9,6 +9,7 @@
   </div>
 
 <%= form_with scope: :search, id: 'myform', url: searches_path, local: true do |form| %>
+<div style="right: -1000px; position: absolute;">
   <p>
     <%= form.label :search_term %><br>
     <%= form.text_area :search_term %>
@@ -17,6 +18,7 @@
     <%= form.submit id: 'linkid' %>
   </p>
 <% end %>
+</div>
 
 <script>
 	// autofill second search form
