@@ -37,6 +37,10 @@ class HomeController < ApplicationController
 		  	@uri = URI(@url)
 		  	@response = Net::HTTP.get(@uri)
 		  	@output = JSON.parse(@response)
+
+		  	@req = JSON.parse(@response)['status']
+
+		  	# @req = (request.env).inspect 
 		  	# @output = JSON.parse(@response)['articles'][0,5]
 
 		  	if @output.empty?
